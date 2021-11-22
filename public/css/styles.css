@@ -6,18 +6,30 @@
     --azul: #03264C;
     --celeste: #1259c3;
     --grisOscuro: #666;
-    --grisOclaro: #ebebeb;
+    --grisOsclaro: #ebebeb;
     --verde: #39b54a;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 50vw;
+}
+#logo{
+    background-color: var(--amarillo);
+}
 div.burger-menu{
     text-align: center;
 }
 
 div.burger-menu i{
-    background-color: #0044AA;
+    background-color: var(--celeste);
     border-radius: 5px;
-    color: #FFF;
+    color: var(--grisOscuro);
     font-size: 20px;
     height: 40px;
     margin: 10px 0px 20px 0px;
@@ -30,9 +42,31 @@ body {
     font-size: 12px;
 }
 
+.mainArticle section article i{
+display: block;
+ font-size: 16px;
+ padding: 5px;
+ width: 30px;
+ height: 30px;
+ border: 1px solid var(--verde);
+ background-color: var(--grisOsclaro);
+ border-radius: 50%;
+ position: absolute;
+ right: 20px;
+}
+
+div.mainArticle i {
+    /* asigna cambios al icono SVG de envio*/
+    color: var(--verde);
+}
+
+.discount{
+    /*cambia propiedades al texto de descuento*/
+    color:var(--verde);
+}
 h3{
     /* Son los titulos de seccion(Ultima visita, ofertas)*/
-    font: size 24px;
+    font-size: 24px;
 }
 
 .price{
@@ -54,4 +88,22 @@ h3{
 
 div.footers i{
     font-size: 2em;
+    color: blue;
+}
+
+
+
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px){
+
 }
