@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Registro</title>
+</head>
+<body>
+
+    <header>
+        <div class="top-header">
+            <div class="logo"> 
+                <img src="./img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+            </div>
+            <div class="form" action="#" method="GET">
+                <div class="input">Buscar productos, marcas y más</div>
+                <div class="submit"><i class="fa fa-search"></i></div>
+            </div>
+            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+    </header>
+
+    <form method="post" action="#">
+        <input class = 'boxInput' type ='text' name = 'nombreApellido' placeholder ='Nombre y apellido'></input>
+        <input class = 'boxInput'type ='text' name = 'userName' placeholder='Nombre de usuario'></input>
+        <input class = 'boxInput'type ='text' name = 'email' placeholder='E-mail'></input>
+
+    <br></br>
+
+        <label for = 'fechaNac'>Fecha de nacimiento: </label>
+        <input type ='date' name = 'fechaNac'></input>
+
+    <br></br>
+
+        <label for = 'address'>Direccion</label>
+        <input type ='text' name = 'address'></input>
+
+    <br></br>
+
+        <label for ='PerfilUser'>Perfil del usuario: </label>
+
+    <br></br>
+
+            <input type="radio" value="Comprador" name = 'Comprador'>Comprador</input>
+            <input type="radio" value="Vendedor" name = 'Vendedor'>Vendedor</input>
+
+    <br></br>
+
+            <Label for ='category'>Categorías de interés</Label>
+
+    <br></br>
+
+            <input type ='checkbox' name = 'category' value='Electro'>Electro</input>
+            <input type ='checkbox' name = 'category' value='Moda'>Moda</input>
+            <input type ='checkbox' name = 'category' value='Hogar'>Hogar</input>
+            <input type ='checkbox' name = 'category' value='Jugueteria'>Jugueteria</input>
+            <input type ='checkbox' name = 'category' value='Vida sana'>Vida sana</input>
+
+    <br></br>
+        
+        <Label for ='avatar'>Inserta tu foto de perfil: </label>
+        <input type ='file' id="avatar" name="avatar" accept="image/png, image/jpeg"></input>
+
+    <br></br>
+
+        <Label for ='avatar'>Ingresa nueva contraseña: </label>
+        <input type=  'password' name='password' value='' placeholder='Password'></input>
+
+    <br></br>
+
+        <Label for ='avatar'>Confirma contraseña: </label>
+        <input type=  'password' name='password' value='' placeholder='confirma tu password'></input>
+
+    <br></br>
+
+        <input type="button" value="Principal" onclick="history.back()">
+        <button type ="reset">Borrar formulario</button>
+    </form>
+    
+    <footer>
+        <div class="footers">
+        <i class="fas fa-credit-card" class='footInconos'></i>
+        <h3>Pagá con tarjeta o en efectivo</h3>
+        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+        <i class="fas fa-gift"></i>
+        <h3>Envío gratis desde $ 2.500</h3>
+        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+        <i class="fas fa-user-shield"></i>
+        <h3>Seguridad, de principio a fin</h3>
+        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+    </div>
+<p class="textCopyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+  
+    </footer>
+
+</body>
+</html>

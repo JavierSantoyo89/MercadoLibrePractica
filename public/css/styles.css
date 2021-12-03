@@ -1,35 +1,93 @@
 /* ! Se recomienda instalar la ext. 'Better Comments' de VSC para tener mejor entendimiento de los comentarios*/
+ /* Nota# el Header y fotter el style y tecto se reutilizaron en los demas sitios */
 
-:root{
-        /* Coloresgenerales*/
-    --amarillo: #EAC926;
-    --azul: #03264C;
-    --celeste: #1259c3;
-    --grisOscuro: #666;
-    --grisOsclaro: #ebebeb;
-    --verde: #39b54a;
-}
-
+/*! ------------------------------ Seccion de configuracion general ------------------------------ */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;    
     box-sizing: border-box;
 }
 
-.logo{
-    width: 50vw;
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
 }
-#logo{
-    background-color: var(--amarillo);
+
+h3{
+    font-size: 24px;
 }
+
+p{
+    font-size: 12px;
+}
+
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo,
+header .form{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 5%;
+}
+
 div.burger-menu{
     text-align: center;
 }
 
 div.burger-menu i{
-    background-color: var(--celeste);
+    background-color: #0044AA;
     border-radius: 5px;
-    color: var(--grisOscuro);
+    color: #FFF;
     font-size: 20px;
     height: 40px;
     margin: 10px 0px 20px 0px;
@@ -37,73 +95,194 @@ div.burger-menu i{
     width: 40px;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-}
-
-.mainArticle section article i{
-display: block;
- font-size: 16px;
- padding: 5px;
- width: 30px;
- height: 30px;
- border: 1px solid var(--verde);
- background-color: var(--grisOsclaro);
- border-radius: 50%;
- position: absolute;
- right: 20px;
-}
-
-div.mainArticle i {
-    /* asigna cambios al icono SVG de envio*/
-    color: var(--verde);
-}
-
-.discount{
-    /*cambia propiedades al texto de descuento*/
-    color:var(--verde);
-}
-h3{
-    /* Son los titulos de seccion(Ultima visita, ofertas)*/
-    font-size: 24px;
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .price{
     font-size: 18px;
+    width: 30%;
 }
 
 .discount{
-    font-size:16px;
+    width: 70%;
 }
 
-.h4{
-    /* Description de cada articulo*/
-    font-size:16px;
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
 }
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+#banner{
+    width: 100vw;
+}
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;   
+}
+main section article:hover{
+    transition-property: box-shadow;
+    transition-duration: 999ms;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article:hover .description{
+    display: block;
+}
+
+main section article img{
+    width: 100%;
+}
+
+
+main section article i,
+.discount{
+    color: #39b54a;
+    align-items:left;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    align-items: left;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section article i:hover{
+    transform: rotate(-90deg);
+}
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+/*! ------------------------------ Seccion footer ------------------------------ */
 
 .footers{
     text-align: center;
+    margin-top:15px;
 }
 
 div.footers i{
     font-size: 2em;
     color: blue;
 }
+footer p{
+    text-align: center;
+}
 
 
+/*! ------------------------------ Seccion de web login ------------------------------ */ 
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
 
+}
+ main input{
+    margin: 10px 0px 10px 0px;
+ }
+ 
+.boxInput {
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+.btnLogin{
+    width: 40vw;
+    align-self: center;
+}
+
+/*! ------------------------------ Seccion de media query's ------------------------------ */ 
 
 @media (min-width: 361px){
+
+
     main section article .description{
         display: block;
     }
 
+
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,.discount{
+        width: 50%;
+    }
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+    main section div.products article{
+        width: 22%;
+    }
+    main section article .description{
+        display: none;
+        text-align: center;
+    }
 
+    main section article{
+        box-shadow: none;
+    }
+
+    .footers{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items:stretch;
+    }
+ 
 }
