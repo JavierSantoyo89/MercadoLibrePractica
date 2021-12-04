@@ -56,6 +56,12 @@ header nav{
     margin-left: 20px;
 }
 
+
+
+div.burger-menu i:hover .navegador{
+            background-color: red;
+}
+
 header ul li{
     list-style-type: none;
 }
@@ -195,11 +201,16 @@ article div.main-article{
     padding: 15px;
 }
 
-/*! ------------------------------ Seccion footer ------------------------------ */
+/*! ------------------------------ Seccion footer(Global) ------------------------------ */
 
 .footers{
-    text-align: center;
+    Display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    text-align: left;
     margin-top:15px;
+    align-items:stretch;
+    background-color: white
 }
 
 div.footers i{
@@ -233,6 +244,49 @@ footer p{
     align-self: center;
 }
 
+.btnRegister{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.btnRegisterSubmit{
+    background-color: blue;
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btnRegisterDelete{
+    background-color: red;
+    color: white;
+    border-radius:5px;
+    padding: 10px;
+}
+
+/*! ------------------------------ Seccion de web register ------------------------------ */ 
+
+.mainformRegister{
+    width:70vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formRegister{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+   
+}
+.btnRegister{
+    width: 40vw;
+    align-self: center;
+}
+
+
 /*! ------------------------------ Seccion de media query's ------------------------------ */ 
 
 @media (min-width: 361px){
@@ -262,9 +316,34 @@ footer p{
     .price,.discount{
         width: 50%;
     }
+
+    /*! ------------ confirguracion web regiter ----------- */
+    .perfilUser{ display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .category{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    
+    }
 }
 
 @media (min-width: 768px){
+   /*7688 header{
+        height: 20vh;
+    }
+
+    .top-header{
+        width: 20vw;
+    }*/
+
     main section div.products article{
         width: 22%;
     }
@@ -284,5 +363,39 @@ footer p{
         justify-content: space-evenly;
         align-items:stretch;
     }
+
+/*! ------------ confirguracion web login ----------- */
+    .formLogin{
+        width: 30vw;
+        font-size: 15px;
+    }
  
+    .btnLogin{
+        width: 10vw;
+        align-self: center;
+    }
+ /*! ------------ confirguracion web register ----------- */
+    .perfilUser{ display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .category{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+    
+    .btnRegister{
+    width: 30vw;
+    align-self: center;
+    }
+
+
 }
+

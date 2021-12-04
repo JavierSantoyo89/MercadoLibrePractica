@@ -14,7 +14,7 @@
     <header>
         <div class="top-header">
             <div class="logo"> 
-                <img src="./img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                <a href="/"><img src="./img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre"></a>
             </div>
             <div class="form" action="#" method="GET">
                 <div class="input">Buscar productos, marcas y más</div>
@@ -22,7 +22,7 @@
             </div>
             <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
-        <nav>
+        <nav class="navegador">
             <ul>
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
@@ -36,78 +36,74 @@
             </ul>
         </nav>
         <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
+            <i id= 'menu' class="fa fa-bars burger"></i>
+           <!--<input type="button" value="Principal" class="btnLogin" onclick="history.back()"<i class="fa fa-bars burger"></i> </input> --------button id='botonMenu'> <i id= 'menu' class="fa fa-bars burger" onclick="menubar.visible "></i></button>-->
+
         </div>
     </header>
 
-    <form method="post" action="#">
-        <input class = 'boxInput' type ='text' name = 'nombreApellido' placeholder ='Nombre y apellido'></input>
-        <input class = 'boxInput'type ='text' name = 'userName' placeholder='Nombre de usuario'></input>
-        <input class = 'boxInput'type ='text' name = 'email' placeholder='E-mail'></input>
+    <main class="mainformRegister">
+        <form class='formRegister' method="post" action="#">
+            <input class = 'boxInput' type ='text' name = 'nombreApellido' placeholder ='Nombre y apellido'></input>
+            <input class = 'boxInput'type ='text' name = 'userName' placeholder='Nombre de usuario'></input>
+            <input class = 'boxInput'type ='text' name = 'email' placeholder='E-mail'></input>
 
-    <br></br>
 
-        <label for = 'fechaNac'>Fecha de nacimiento: </label>
-        <input type ='date' name = 'fechaNac'></input>
+            <label for = 'fechaNac'>Fecha de nacimiento: </label>
+                <input type ='date' name = 'fechaNac'></input>
 
-    <br></br>
 
-        <label for = 'address'>Direccion</label>
-        <input type ='text' name = 'address'></input>
+            <label for = 'address'>Direccion: </label>
+             <textarea id="adress" name="adress" rows="4" cols="1"></textarea>
 
-    <br></br>
 
-        <label for ='PerfilUser'>Perfil del usuario: </label>
-
-    <br></br>
-
-            <input type="radio" value="Comprador" name = 'Comprador'>Comprador</input>
-            <input type="radio" value="Vendedor" name = 'Vendedor'>Vendedor</input>
-
-    <br></br>
+            <label for ='perfilUser'>Perfil del usuario: </label>
+                <div class = 'perfilUser'>
+                    <input type="radio" value="Comprador" name = 'perfil'>Comprador</input>
+                    <input type="radio" value="Vendedor" name = 'perfil'>Vendedor</input>
+                </div>
 
             <Label for ='category'>Categorías de interés</Label>
+                <div class="category">
+                    <input type ='checkbox' name = 'category' value='Electro'>Electro</input>
+                    <input type ='checkbox' name = 'category' value='Moda'>Moda</input>
+                    <input type ='checkbox' name = 'category' value='Hogar'>Hogar</input>
+                    <input type ='checkbox' name = 'category' value='Jugueteria'>Jugueteria</input>
+                    <input type ='checkbox' name = 'category' value='Vida sana'>Vida sana</input>
+                </div>
+            
+            <Label for ='avatar'>Inserta tu foto de perfil: </label>
+                <input type ='file' id="avatar" name="avatar" accept="image/png, image/jpeg"></input>
 
-    <br></br>
 
-            <input type ='checkbox' name = 'category' value='Electro'>Electro</input>
-            <input type ='checkbox' name = 'category' value='Moda'>Moda</input>
-            <input type ='checkbox' name = 'category' value='Hogar'>Hogar</input>
-            <input type ='checkbox' name = 'category' value='Jugueteria'>Jugueteria</input>
-            <input type ='checkbox' name = 'category' value='Vida sana'>Vida sana</input>
+            <Label for ='avatar'>Ingresa nueva contraseña: </label>
+                <input type=  'password' name='password' value='' placeholder='Password'></input>
 
-    <br></br>
-        
-        <Label for ='avatar'>Inserta tu foto de perfil: </label>
-        <input type ='file' id="avatar" name="avatar" accept="image/png, image/jpeg"></input>
 
-    <br></br>
+            <Label for ='avatar'>Confirma contraseña: </label>
+                <input type=  'password' name='password' value='' placeholder='confirma tu password'></input>
 
-        <Label for ='avatar'>Ingresa nueva contraseña: </label>
-        <input type=  'password' name='password' value='' placeholder='Password'></input>
-
-    <br></br>
-
-        <Label for ='avatar'>Confirma contraseña: </label>
-        <input type=  'password' name='password' value='' placeholder='confirma tu password'></input>
-
-    <br></br>
-
-        <input type="button" value="Principal" onclick="history.back()">
-        <button type ="reset">Borrar formulario</button>
-    </form>
-    
+            <div class='btnRegister'>
+                <!--<input  type="button" value="Principal" onclick="history.back()" ></input>-->
+                <button class='btnRegisterSubmit' type="submit" value="Enviar" >Enviar</button>
+                <button class='btnRegisterDelete' type ="reset">Borrar</button>
+            </div>
+        </form>
+    </main>
     <footer>
         <div class="footers">
         <i class="fas fa-credit-card" class='footInconos'></i>
         <h3>Pagá con tarjeta o en efectivo</h3>
         <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+        <br>
         <i class="fas fa-gift"></i>
         <h3>Envío gratis desde $ 2.500</h3>
         <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+        <br>
         <i class="fas fa-user-shield"></i>
         <h3>Seguridad, de principio a fin</h3>
         <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+        <br>
     </div>
 <p class="textCopyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
   
