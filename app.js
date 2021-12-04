@@ -1,7 +1,7 @@
 const express = require('Express');
 const app = express();
 const path = require('path');
-const port = 1689;
+const port = 3000;
 
 app.use(express.static('public'));
 
@@ -21,7 +21,7 @@ app.get('/login', (req,res)=>{
 
 
 /* -------------------------------- Seccion de levantado del servidor -------------------- */
-app.listen(port,()=>{
+app.listen(process.env.port,()=>{
     console.log('Servidor activado en el puerto: http://localhost:'+ port);
 });
 
