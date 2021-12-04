@@ -6,10 +6,14 @@ const port = 3000;
 app.use(express.static('public'));
 
 
-/*! ------------------------ Seccion de rutas web dentro del dominio -------------------- */ 
+/*! ------------------------ Seccion de rutas web dentro del dominio -------------------- 
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, "/views/home.html"))
+});*/
+app.get('/', (req,res)=>{
+    res.sendFile(__dirname + '/views/home.html');
 });
+
 
 app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
