@@ -1,7 +1,7 @@
 const express = require('Express');
 const app = express();
 const path = require('path');
-const port = 3000;
+
 
 app.use(express.static('public'));
 
@@ -25,7 +25,7 @@ app.get('/login', (req,res)=>{
 
 
 /* -------------------------------- Seccion de levantado del servidor -------------------- */
-app.listen(process.env.port || 3000,()=>{
-    console.log('Servidor activado en el puerto: http://localhost:'+ port);
+app.listen(process.env.PORT || 3000, function(){
+    console.log('Servidor activado en el puerto: http://localhost:3000');
 });
 
