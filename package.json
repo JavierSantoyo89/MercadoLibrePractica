@@ -1,0 +1,19 @@
+{
+  "name": "mercadoliebre",
+  "version": "1.0.0",
+  "description": "Version depractica de mercado libre",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierSantoyo89/MercadoLibrePractica.git"
+  },
+  "author": "Javier Santoyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JavierSantoyo89/MercadoLibrePractica/issues"
+  },
+  "homepage": "https://github.com/JavierSantoyo89/MercadoLibrePractica#readme"
+}
