@@ -25,7 +25,7 @@ app.get('/login', (req,res)=>{
 
 
 /* -------------------------------- Seccion de levantado del servidor -------------------- */
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 5000, function(){
     console.log('Servidor activado en el puerto: http://localhost:3000');
 });
 
